@@ -1,6 +1,6 @@
 {
-  "name": "server-mockr",
-  "version": "1.1.1",
+  "name": "server-mockrs",
+  "version": "1.1.3",
   "description": "Package to mock HTTP APIs for fast and reliable testing.",
   "main": "dist/index.js",
   "files": [
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/boschni/server-mockr.git"
+    "url": "git+https://github.com/amit034/server-mockr.git"
   },
   "keywords": [
     "mock",
@@ -37,12 +37,8 @@
     "fake",
     "dummy"
   ],
-  "author": "Niek Bosch <info@niek-bosch.nl>",
+  "author": "amitr",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/boschni/server-mockr/issues"
-  },
-  "homepage": "https://github.com/boschni/server-mockr#readme",
   "dependencies": {
     "body-parser": "^1.20.0",
     "cookie": "^0.4.2",
