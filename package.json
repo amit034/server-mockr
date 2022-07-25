@@ -1,6 +1,6 @@
 {
   "name": "server-mockrs",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "Package to mock HTTP APIs for fast and reliable testing.",
   "main": "dist/index.js",
   "files": [

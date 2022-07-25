@@ -38,7 +38,9 @@ export class Response {
   constructor(body?: unknown) {
     if (typeof body === "string") {
       this.text(body);
-    } else if (typeof body !== "undefined") {
+    } else if((body as any).constructor.name === 'Buffer') {
+      this.header("Content-Type", "application/x-protobuf");
+    }  else if (typeof body !== "undefined") {
       this.json(body);
     }
   }

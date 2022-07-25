@@ -9,7 +9,7 @@ export class SetBodyAction implements RespondAction {
   constructor(private body?: string) {}
 
   async execute(ctx: ExpectationValue): Promise<void> {
-    if (typeof this.body === "string") {
+    if (typeof this.body === "string" || (typeof this.body === "function" && (this.body as object).constructor.name === 'Buffer')) {
       ctx.res.body = this.body;
     }
   }
