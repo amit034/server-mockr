@@ -39,6 +39,7 @@ export class Response {
     if (typeof body === "string") {
       this.text(body);
     } else if((body as any).constructor.name === 'Buffer') {
+      this.body(body);
       this.header("Content-Type", "application/x-protobuf");
     }  else if (typeof body !== "undefined") {
       this.json(body);
@@ -72,7 +73,7 @@ export class Response {
     return this;
   }
 
-  body(body: string): this {
+  body(body: any): this {
     this._body = body;
     return this;
   }
@@ -149,7 +150,6 @@ export class Response {
         const setBody = new SetBodyAction(this._body);
         await setBody.execute(ctx);
       }
-
       if (this._statusCode) {
         const setStatus = new SetStatusAction(this._statusCode);
         await setStatus.execute(ctx);
